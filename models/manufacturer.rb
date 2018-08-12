@@ -14,7 +14,7 @@ class Manufacturer
     @phone_number = options['phone_number']
     @notes = options['notes']
   end
-
+  
   def save()
     sql = "INSERT INTO manufacturers
     (

@@ -16,9 +16,9 @@ CREATE TABLE products
 (
   id SERIAL PRIMARY KEY,
   product_name VARCHAR(255),
-  descricption TEXT,
+  description TEXT,
   stock INT,
   buying_cost NUMERIC,
-  selling_cost NUMERIC,
+  selling_price NUMERIC,
   manufacturer_id INT REFERENCES manufacturers(id) ON DELETE CASCADE
 );

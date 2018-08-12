@@ -1,4 +1,5 @@
 require_relative('../models/manufacturer.rb')
+require_relative('../models/product.rb')
 require('pry')
 
 Manufacturer.delete_all()
@@ -27,6 +28,19 @@ manufacturer2 = Manufacturer.new(
 
 manufacturer1.save()
 manufacturer2.save()
+
+product1 = Product.new(
+  {
+    'product_name' => "Dungeons & Dragons Player's Handbook",
+    'description' => "The player's handbook is the essetial reference for every Dungeons & Dragons roleplayer. It contains rules for character creation and advancement, battlegrounds and skills, exploration and combat, equipment, spells, and much more.",
+    'stock' => 6,
+    'buying_cost' => 20.00,
+    'selling_cost' => 27.99,
+    'manufacturer_id' => manufacturer1.id()
+  }
+)
+
+product1.save()
 
 binding.pry
 nil
