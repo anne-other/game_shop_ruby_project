@@ -1,4 +1,4 @@
-require_relative('db/sql_runner.rb')
+require_relative('../db/sql_runner.rb')
 
 class Manufacturer
 
@@ -16,7 +16,7 @@ class Manufacturer
   end
 
   def save()
-    sql = "INPUT INTO manufacturers
+    sql = "INSERT INTO manufacturers
     (
       manufacturer_name,
       website,
