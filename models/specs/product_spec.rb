@@ -29,4 +29,10 @@ class ProductTest < MiniTest::Test
     assert_equal("low_stock", result)
   end
 
+  def test_stock_check_out_of_stock()
+    @product1.stock = 0
+    result = @product1.stock_check()
+    assert_equal("out_of_stock", result)
+  end
+
 end
