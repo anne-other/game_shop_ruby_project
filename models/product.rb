@@ -66,6 +66,12 @@ class Product
     return Manufacturer.new(manufacturers.first)
   end
 
+  def stock_check()
+    if @stock > 5
+      return "in_stock"
+    end
+  end
+
   def self.all()
     sql = "SELECT * FROM products"
     products = SqlRunner.run(sql)

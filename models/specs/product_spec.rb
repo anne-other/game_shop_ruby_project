@@ -5,8 +5,8 @@ require_relative('../product.rb')
 
 class ProductTest < MiniTest::Test
 
-  def initialize()
-    product1 = Product.new(
+  def setup()
+    @product1 = Product.new(
       {
         'product_name' => "Dungeons & Dragons Player's Handbook",
         'description' => "The player's handbook is the essetial reference for every Dungeons & Dragons roleplayer. It contains rules for character creation and advancement, battlegrounds and skills, exploration and combat, equipment, spells, and much more.",
@@ -16,6 +16,11 @@ class ProductTest < MiniTest::Test
         'manufacturer_id' => 1
       }
     )
+  end
+
+  def test_stock_check_in_stock()
+    result = @product1.stock_check()
+    assert_equal("in_stock", result)
   end
 
 end
