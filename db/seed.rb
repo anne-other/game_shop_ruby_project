@@ -2,6 +2,7 @@ require_relative('../models/manufacturer.rb')
 require_relative('../models/product.rb')
 require('pry')
 
+Product.delete_all()
 Manufacturer.delete_all()
 
 manufacturer1 = Manufacturer.new(
