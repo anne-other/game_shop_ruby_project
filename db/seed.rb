@@ -27,8 +27,20 @@ manufacturer2 = Manufacturer.new(
   }
 )
 
+manufacturer3 = Manufacturer.new(
+  {
+    'manufacturer_name' => "Fun Forge",
+    'website' => "http://www.funforge.fr/US/",
+    'contact_name' => "F. Forger",
+    'email' => "f.forger@funforge.com",
+    'phone_number' => "+33 000 000",
+    'notes' => "Based in France, but have good connections across the globe"
+  }
+)
+
 manufacturer1.save()
 manufacturer2.save()
+manufacturer3.save()
 
 product1 = Product.new(
   {
