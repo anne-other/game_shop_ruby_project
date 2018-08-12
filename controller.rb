@@ -11,3 +11,9 @@ get '/inventory' do
   @products = Product.all()
   erb (:index)
 end
+
+#SHOW Manufacturer
+get '/inventory/manufacturer/:id' do
+  @manufacturer = Manufacturer.find(params['id'].to_i())
+  erb (:"manufacturer/show")
+end
