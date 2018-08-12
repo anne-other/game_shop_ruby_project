@@ -41,7 +41,19 @@ product1 = Product.new(
   }
 )
 
+product2 = Product.new(
+  {
+    'product_name' => "Magic The Gathering Core 2019 Deck Builders Toolkit",
+    'description' => "Take your collection to the next level with a core set 2019 deck builder's Toolkit, offering more than 250 cards and an assortment of deck-building aids so you can make decks that are truly your own.",
+    'stock' => 0,
+    'buying_cost' => 10.00,
+    'selling_price' => 19.99,
+    'manufacturer_id' => manufacturer1.id()
+  }
+)
+
 product1.save()
+product2.save()
 
 binding.pry
 nil
