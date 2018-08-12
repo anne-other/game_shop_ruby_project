@@ -32,6 +32,22 @@ class Manufacturer
     @id = results.first()['id'].to_i()
   end
 
+  def update()
+    sql = "UPDATE manufacturers SET
+    (
+      manufacturer_name,
+      website,
+      contact_name,
+      email,
+      phone_number,
+      notes
+    )
+    = ($1, $2, $3, $4, $5, $6)
+    WHERE id = $7"
+    values = [@manufacturer_name, @website, @contact_name, @email, @phone_number, @notes, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.delete_all()
     sql = "DELETE FROM manufacturers"
     SqlRunner.run(sql)
