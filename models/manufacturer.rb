@@ -32,4 +32,9 @@ class Manufacturer
     @id = results.first()['id'].to_i()
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM manufacturers"
+    SqlRunner.run(sql)
+  end
+
 end

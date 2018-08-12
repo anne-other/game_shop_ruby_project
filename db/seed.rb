@@ -1,6 +1,8 @@
 require_relative('../models/manufacturer.rb')
 require('pry')
 
+Manufacturer.delete_all()
+
 manufacturer1 = Manufacturer.new(
   {
     'manufacturer_name' => "Wizards of the Coast",
