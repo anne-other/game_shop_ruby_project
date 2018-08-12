@@ -67,7 +67,10 @@ class Product
   end
 
   def stock_check()
-    if @stock > 5
+    case @stock
+    when 1..5
+      return "low_stock"
+    else
       return "in_stock"
     end
   end
