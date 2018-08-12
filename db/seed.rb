@@ -66,6 +66,6 @@ product2 = Product.new(
 
 product1.save()
 product2.save()
-
-binding.pry
-nil
+# 
+# binding.pry
+# nil
