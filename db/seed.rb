@@ -14,7 +14,19 @@ manufacturer1 = Manufacturer.new(
   }
 )
 
+manufacturer2 = Manufacturer.new(
+  {
+    'manufacturer_name' => "DnDice",
+    'website' => "https://www.dndice.co.uk/",
+    'contact_name' => "D. Dicey",
+    'email' => "d.dicey@dndice.co.uk",
+    'phone_number' => "0800 000 000",
+    'notes' => "Hard to get hold of contact details, but friendly and eager to supply local gaming stores."
+  }
+)
+
 manufacturer1.save()
+manufacturer2.save()
 
 binding.pry
 nil
