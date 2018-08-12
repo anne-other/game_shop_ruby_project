@@ -14,7 +14,7 @@ class Manufacturer
     @phone_number = options['phone_number']
     @notes = options['notes']
   end
-  
+
   def save()
     sql = "INSERT INTO manufacturers
     (
@@ -70,6 +70,12 @@ class Manufacturer
     values = [id]
     manufacturers = SqlRunner.run(sql, values)
     return Manufacturer.new(manufacturers.first())
+  end
+
+  def self.no_product()
+    sql = "SELECT manufacturers.* FROM manufacturers LEFT JOIN products ON manufacturers.id = products.manufacturer_id WHERE products.id IS NULL"
+    manufacturers = SqlRunner.run(sql)
+    return manufacturers.map { |manufacturer| Manufacturer.new(manufacturer)}
   end
 
 end
