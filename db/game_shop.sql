@@ -1,5 +1,5 @@
-DROP TABLE products
-DROP TABLE manufacturers
+DROP TABLE products;
+DROP TABLE manufacturers;
 
 CREATE TABLE manufacturers
 (
@@ -10,7 +10,7 @@ CREATE TABLE manufacturers
   email VARCHAR(255),
   phone_number VARCHAR(255),
   notes TEXT
-)
+);
 
 CREATE TABLE products
 (
@@ -21,4 +21,4 @@ CREATE TABLE products
   buying_cost NUMERIC,
   selling_cost NUMERIC,
   manufacturer_id INT REFERENCES manufacturers(id) ON DELETE CASCADE
-)
+);
