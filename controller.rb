@@ -7,7 +7,7 @@ also_reload('models/*')
 
 #INDEX
 get '/inventory' do
-  # @manufacturers = Manufacturer.all()
+  @manufacturers = Manufacturer.no_product()
   @products = Product.all()
   erb (:index)
 end
