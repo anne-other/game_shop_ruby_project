@@ -43,4 +43,11 @@ class Manufacturer
     return manufacturers.map { |manufacturer| Manufacturer.new(manufacturer)}
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM manufacturers WHERE id = $1"
+    values = [id]
+    manufacturers = SqlRunner.run(sql, values)
+    return Manufacturer.new(manufacturers.first())
+  end
+
 end
