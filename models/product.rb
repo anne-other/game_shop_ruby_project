@@ -59,6 +59,13 @@ class Product
     SqlRunner.run(sql)
   end
 
+  def manufacturer()
+    sql = "SELECT * FROM manufacturers WHERE id = $1"
+    values = [@manufacturer_id]
+    manufacturers = SqlRunner.run(sql, values)
+    return Manufacturer.new(manufacturers.first)
+  end
+
   def self.all()
     sql = "SELECT * FROM products"
     products = SqlRunner.run(sql)
