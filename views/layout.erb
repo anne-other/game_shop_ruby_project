@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Adventurer's Inventory</title>
-    <link href="/styles/style.css" type="text/css" rel="stylesheet">
-  </head>
-  <body>
-    <%= yield %>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Adventurer's Inventory</title>
+  <link href="/styles/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="/inventory"> Inventory </a>
+    <a href="/inventory/product/new-product"> New Product </a>
+    <a href="/inventory/manufacturer/new-manufacturer"> New Manufacturer </a>
+  </nav>
+  <%= yield %>
+</body>
 </html>
