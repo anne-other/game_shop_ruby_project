@@ -14,7 +14,7 @@ end
 post '/inventory/manufacturer' do
   @manufacturer = Manufacturer.new(params)
   @manufacturer.save()
-  redirect to "/inventory"
+  redirect to "/inventory/manufacturer/#{@manufacturer.id}"
 end
 
 #SHOW
