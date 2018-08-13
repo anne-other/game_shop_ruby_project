@@ -10,8 +10,8 @@ class Product
     @product_name = options['product_name']
     @description = options['description']
     @stock = options['stock'].to_i()
-    @buying_cost = options['buying_cost'].to_f()
-    @selling_price = options['selling_price'].to_f()
+    @buying_cost = '%.2f' % (options['buying_cost'].to_f())
+    @selling_price = '%.2f' % (options['selling_price'].to_f())
     @manufacturer_id = options['manufacturer_id'].to_i()
   end
 
