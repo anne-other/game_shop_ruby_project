@@ -23,3 +23,9 @@ get '/inventory/product/:id' do
   @product = Product.find(params['id'].to_i())
   erb (:"product/show")
 end
+
+#EDIT
+get '/inventory/product/:id/edit' do
+  @product = Product.find(params[:id])
+  erb (:"product/edit")
+end
