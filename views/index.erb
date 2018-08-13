@@ -1,4 +1,4 @@
-<h1>Inventory</h1>
+<h2>Inventory</h2>
 
 <table>
   <tr>
@@ -17,7 +17,7 @@
   <% end %>
 </table>
 
-<h2>Other Manufacturers</h2>
+<h3>Other Manufacturers</h3>
 <% @manufacturers.each do |manufacturer| %>
 <p><a href="/inventory/manufacturer/<%= manufacturer.id %>"><%= manufacturer.manufacturer_name %></p>
 <% end %>
