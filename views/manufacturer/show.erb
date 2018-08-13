@@ -6,3 +6,7 @@
 <p>Email: <%= @manufacturer.email() %></p>
 <p>Phone: <%= @manufacturer.phone_number() %></p>
 <p>Notes: <%= @manufacturer.notes() %></p>
+
+<form action="/inventory/manufacturer/<%= @manufacturer.id %>/edit" method="get">
+  <input type="submit" value="Update Manufacturer">
+</form>
