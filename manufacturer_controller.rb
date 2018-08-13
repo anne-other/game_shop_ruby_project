@@ -22,3 +22,9 @@ get '/inventory/manufacturer/:id' do
   @manufacturer = Manufacturer.find(params['id'].to_i())
   erb (:"manufacturer/show")
 end
+
+#EDIT
+get '/inventory/manufacturer/:id/edit' do
+  @manufacturer = Manufacturer.find(params[:id])
+  erb (:"manufacturer/edit")
+end
