@@ -18,14 +18,21 @@ get '/inventory/manufacturer/:id' do
   erb (:"manufacturer/show")
 end
 
+#NEW Product
+get '/inventory/product/new-product' do
+  @manufacturers = Manufacturer.all()
+  erb (:"product/new")
+end
+
+#CREATE Product
+post '/inventory/product' do
+  @product = Product.new(params)
+  @product.save()
+  redirect ("/inventory")
+end
+
 #SHOW Product
 get '/inventory/product/:id' do
   @product = Product.find(params['id'].to_i())
   erb (:"product/show")
-end
-
-#NEW Product
-get '/inventory/new-product' do
-  @manufacturers = Manufacturer.all()
-  erb (:"product/new")
 end
