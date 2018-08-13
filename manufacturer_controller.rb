@@ -34,3 +34,10 @@ post '/inventory/manufacturer/:id' do
   Manufacturer.new(params).update()
   redirect to "/inventory/manufacturer/#{params['id']}"
 end
+
+#DELETE
+post '/inventory/manufacturer/:id/delete' do
+  manufacturer = Manufacturer.find(params[:id])
+  manufacturer.delete()
+  redirect to "/inventory"
+end
