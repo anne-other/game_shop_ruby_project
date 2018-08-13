@@ -19,5 +19,5 @@
 
 <h2>Other Manufacturers</h2>
 <% @manufacturers.each do |manufacturer| %>
-<p><%= manufacturer.manufacturer_name %></p>
+<p><a href="/inventory/manufacturer/<%= manufacturer.id %>"><%= manufacturer.manufacturer_name %></p>
 <% end %>
