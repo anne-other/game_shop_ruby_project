@@ -1,0 +1,29 @@
+<h1>New Product</h1>
+
+<form action="/inventory" method="post">
+
+  <label for="product-name">Name: </label>
+  <input id="product-name" type="text" name="product_name">
+
+  <label for="description">Description: </label>
+  <input id="description" type="text" name="description">
+
+  <label for="stock">Stock: </label>
+  <input id="stock" type="number" min="0" name="stock">
+
+  <label for="buying-cost">Buying Cost: £</label>
+  <input id="buying-cost" type="number" min="0" step="0.01" name="buying_cost">
+
+  <label for="selling-price">Selling Price: £</label>
+  <input id="selling-price" type="number" min="0" step=0.01 name="selling_price">
+
+  <label for="manufacturer-select">Select A Manufacturer: </label>
+  <select id="manufacturer-select" name="manufacturer_id">
+    <% @manufacturers.each do |manufacturer| %>
+    <option value="<%= manufacturer.id %>"> <%= manufacturer.manufacturer_name() %></option>
+    <%end%>
+  </select>
+
+  <input type="submit" value="Add">
+
+</form>

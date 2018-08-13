@@ -25,7 +25,7 @@ get '/inventory/product/:id' do
 end
 
 #NEW Product
-get '/inventory/product/new-product' do
-  @manufacturer = Manufacturer.all()
+get '/inventory/new-product' do
+  @manufacturers = Manufacturer.all()
   erb (:"product/new")
 end
