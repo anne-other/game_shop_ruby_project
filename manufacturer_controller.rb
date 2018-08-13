@@ -14,7 +14,7 @@ end
 post '/inventory/manufacturer' do
   @manufacturer = Manufacturer.new(params)
   @manufacturer.save()
-  redirect("/inventory")
+  redirect to "/inventory"
 end
 
 #SHOW
@@ -27,4 +27,10 @@ end
 get '/inventory/manufacturer/:id/edit' do
   @manufacturer = Manufacturer.find(params[:id])
   erb (:"manufacturer/edit")
+end
+
+#UPDATE
+post '/inventory/manufacturer/:id' do
+  Manufacturer.new(params).update()
+  redirect to "/inventory/manufacturer/#{params['id']}"
 end
