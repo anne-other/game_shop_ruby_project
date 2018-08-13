@@ -23,3 +23,9 @@ get '/inventory/product/:id' do
   @product = Product.find(params['id'].to_i())
   erb (:"product/show")
 end
+
+#NEW Product
+get '/inventory/product/new-product' do
+  @manufacturer = Manufacturer.all()
+  erb (:"product/new")
+end
