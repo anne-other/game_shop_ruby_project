@@ -12,6 +12,8 @@ get '/inventory' do
   erb (:index)
 end
 
+#NEW Manufacturer
+
 #SHOW Manufacturer
 get '/inventory/manufacturer/:id' do
   @manufacturer = Manufacturer.find(params['id'].to_i())
