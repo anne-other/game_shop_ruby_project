@@ -36,3 +36,10 @@ post '/inventory/product/:id' do
   Product.new(params).update()
   redirect to "/inventory/product/#{params['id']}"
 end
+
+#DELETE
+post '/inventory/product/:id/delete' do
+  product = Product.find(params[:id])
+  product.delete()
+  redirect to "/inventory"
+end
