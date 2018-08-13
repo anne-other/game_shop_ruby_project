@@ -64,8 +64,21 @@ product2 = Product.new(
   }
 )
 
+product3 = Product.new(
+  {
+    'product_name' => "Prismatic Chromatic Dragon Dice Set",
+    'description' => "Vampires driving you batty? A full solid metal set of 7 poly dice coated in a prismatic flame touched finish with white inking is here is here to help vanquish evil! Named 'Prismatic Chromatic Dragon', each set comes with a d20, d12, d10, d8, d6, d4 and a percentile die complete with a black metal carry tin with the Chromatic insignia",
+    'stock' => 2,
+    'buying_cost' => 25.00,
+    'selling_price' => 29.95,
+    'manufacturer_id' => manufacturer2.id()
+  }
+)
+
 product1.save()
 product2.save()
-# 
+product3.save()
+
+
 # binding.pry
 # nil
