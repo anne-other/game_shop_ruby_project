@@ -1,0 +1,12 @@
+
+.in_stock {
+  color: green;
+}
+
+.low_stock {
+  color: orange;
+}
+
+.out_of_stock {
+  color: red;
+}
