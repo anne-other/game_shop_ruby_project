@@ -1,11 +1,19 @@
 <h2>Manufacturer</h2>
 
-<p>Name: <%= @manufacturer.manufacturer_name() %></p>
-<p>Website: <a href="<%=@manufacturer.website()%>"><%= @manufacturer.website() %> </a></p>
-<p>Contact Name: <%= @manufacturer.contact_name() %></p>
-<p>Email: <%= @manufacturer.email() %></p>
-<p>Phone: <%= @manufacturer.phone_number() %></p>
-<p>Notes: <%= @manufacturer.notes() %></p>
+<dl>
+<dt>Name:</dt>
+<dd> <%= @manufacturer.manufacturer_name() %></dd>
+<dt>Website:</dt>
+<dd> <a href="<%=@manufacturer.website()%>"><%= @manufacturer.website() %> </a></dd>
+<dt>Contact Name:</dt>
+<dd><%= @manufacturer.contact_name() %></dd>
+<dt>Email:</dt>
+  <dd> <%= @manufacturer.email() %></dd>
+<dt>Phone:</dt>
+<dd> <%= @manufacturer.phone_number() %></dd>
+<dt>Notes:</dt>
+<dd> <%= @manufacturer.notes() %></dd>
+</dl>
 
 <form action="/inventory/manufacturer/<%= @manufacturer.id %>/edit" method="get">
   <input type="submit" value="Update Manufacturer">
