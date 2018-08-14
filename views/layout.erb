@@ -6,12 +6,14 @@
   <link href="/styles/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-  <h1>Adventurer's Inventory</h1>
-  <nav>
-    <a href="/inventory"> Inventory </a>
-    <a href="/inventory/product/new-product"> New Product </a>
-    <a href="/inventory/manufacturer/new-manufacturer"> New Manufacturer </a>
-  </nav>
+  <div class="header">
+    <h1>Adventurer's Inventory</h1>
+    <nav>
+      <a href="/inventory"> Inventory </a>
+      <a href="/inventory/product/new-product"> New Product </a>
+      <a href="/inventory/manufacturer/new-manufacturer"> New Manufacturer </a>
+    </nav>
+  </div>
   <%= yield %>
 </body>
 </html>

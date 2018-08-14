@@ -49,9 +49,13 @@ h2, h3, th {
   font-family: "Signika", sans-serif;
 }
 
-nav {
-  background-color: rgb(168,50,61);
+div.header {
+  background-color: rgb(168,50,61,0.8);
   color: white;
+}
+
+table {
+  background-color: rgb(255,255,255,0.5)
 }
 
 .in_stock {
