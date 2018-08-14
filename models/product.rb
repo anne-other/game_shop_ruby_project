@@ -77,6 +77,14 @@ class Product
     end
   end
 
+  def markup()
+    buying_cost = @buying_cost.to_f()
+    selling_price = @selling_price.to_f()
+    markup_number = ((selling_price - buying_cost) / buying_cost) * 100
+    markup_number = markup_number.round
+    return markup_number
+  end
+
   def self.all()
     sql = "SELECT * FROM products"
     products = SqlRunner.run(sql)

@@ -35,4 +35,9 @@ class ProductTest < MiniTest::Test
     assert_equal("out_of_stock", result)
   end
 
+  def test_markup()
+    result = @product1.markup()
+    assert_equal(40, result)
+  end
+
 end
