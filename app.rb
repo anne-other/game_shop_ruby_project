@@ -6,9 +6,20 @@ require_relative('models/manufacturer.rb')
 require_relative('models/product.rb')
 also_reload('./models/*')
 
+require("pry")
+
 #INDEX
 get '/inventory' do
-  @manufacturers = Manufacturer.no_product()
+  @manufacturers = Manufacturer.all()
+  @manufacturers_other = Manufacturer.no_product()
   @products = Product.all()
   erb (:index)
+end
+
+#FILTER
+post '/inventory' do
+  @manufacturer = Manufacturer.find(params["manufacturer_id"])
+  @products = Product.all()
+  # binding.pry
+  erb (:filter)
 end
