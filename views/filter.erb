@@ -1,5 +1,9 @@
 <h2>Inventory <%= @manufacturer.manufacturer_name %></h2>
 
+
+<% if @check %>
+<h3>This Manufacturer Currently Has No Products Associated With It</h3>
+<% else %>
 <table>
   <tr>
     <th>Product</th>
@@ -18,3 +22,5 @@
     <%end%>
   <% end %>
 </table>
+
+<%end%>

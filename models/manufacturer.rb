@@ -78,4 +78,15 @@ class Manufacturer
     return manufacturers.map { |manufacturer| Manufacturer.new(manufacturer)}
   end
 
+  def check_has_no_product()
+    manufacturers = Manufacturer.no_product()
+    manufacturers.each do |manufacturer|
+      if manufacturer.id() == @id
+        return true
+      else
+        return false
+      end
+    end
+  end
+
 end

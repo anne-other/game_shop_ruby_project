@@ -20,6 +20,6 @@ end
 post '/inventory' do
   @manufacturer = Manufacturer.find(params["manufacturer_id"])
   @products = Product.all()
-  # binding.pry
+  @check = @manufacturer.check_has_no_product()
   erb (:filter)
 end
