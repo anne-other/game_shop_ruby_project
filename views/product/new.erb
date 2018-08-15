@@ -1,35 +1,74 @@
 <h2>New Product</h2>
 
-<form action="/inventory/product" method="post">
+<div id="form-container">
+  <form action="/inventory/product" method="post">
 
-  <label for="product-name">Name: </label>
-  <input id="product-name" type="text" name="product_name">
-  <br>
+    <div class="row">
+      <div class="col_left">
+        <label for="product-name">Name: </label>
+      </div>
+      <div class="col_right">
+        <input id="product-name" type="text" name="product_name">
+      </div>
+    </div>
+    <br>
 
-  <label for="description">Description: </label>
-  <input id="description" type="text" name="description" class="long_text">
-  <br>
+    <div class="row">
+      <div class="col_left">
+        <label for="description">Description: </label>
+      </div>
+      <div class="col_right">
+        <input id="description" type="text" name="description" class="long_text">
+      </div>
+    </div>
+    <br>
 
-  <label for="stock">Stock: </label>
-  <input id="stock" type="number" min="0" name="stock">
-  <br>
 
-  <label for="buying-cost">Buying Cost: £</label>
-  <input id="buying-cost" type="number" min="0" step="0.01" name="buying_cost">
-  <br>
+    <div class="row">
+      <div class="col_left">
+        <label for="stock">Stock: </label>
+      </div>
+      <div class="col_right">
+        <input id="stock" type="number" min="0" name="stock">
+      </div>
+    </div>
+    <br>
 
-  <label for="selling-price">Selling Price: £</label>
-  <input id="selling-price" type="number" min="0" step=0.01 name="selling_price">
-  <br>
+    <div class="row">
+      <div class="col_left">
+        <label for="buying-cost">Buying Cost: £</label>
+      </div>
+      <div class="col_right">
+        <input id="buying-cost" type="number" min="0" step="0.01" name="buying_cost">
+      </div>
+    </div>
+    <br>
 
-  <label for="manufacturer-select">Select A Manufacturer: </label>
-  <select id="manufacturer-select" name="manufacturer_id">
-    <% @manufacturers.each do |manufacturer| %>
-    <option value="<%= manufacturer.id %>"> <%= manufacturer.manufacturer_name() %></option>
-    <%end%>
-  </select>
-  <br>
+    <div class="row">
+      <div class="col_left">
+        <label for="selling-price">Selling Price: £</label>
+      </div>
+      <div class="col_right">
+        <input id="selling-price" type="number" min="0" step=0.01 name="selling_price">
+      </div>
+    </div>
+    <br>
 
-  <input type="submit" value="Add">
+    <div class="row">
+      <div class="col_left">
+        <label for="manufacturer-select">Select A Manufacturer: </label>
+      </div>
+      <div class="col_right">
+        <select id="manufacturer-select" name="manufacturer_id">
+          <% @manufacturers.each do |manufacturer| %>
+          <option value="<%= manufacturer.id %>"> <%= manufacturer.manufacturer_name() %></option>
+          <%end%>
+        </select>
+      </div>
+    </div>
+    <br>
 
-</form>
+    <input type="submit" value="Add">
+
+  </form>
+</div>

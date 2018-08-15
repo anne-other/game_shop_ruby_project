@@ -1,28 +1,63 @@
 <h2>Edit Product</h2>
 
+<div id="form-container">
 <form action="/inventory/product/<%= @product.id %>" method="post">
 
+  <div class="row">
+    <div class="col_left">
   <label for="product-name">Name: </label>
+</div>
+<div class="col_right">
   <input id="product-name" type="text" name="product_name" value="<%= @product.product_name() %>">
+</div>
+</div>
   <br>
 
+  <div class="row">
+    <div class="col_left">
   <label for="description">Description: </label>
-  <input id="description" type="text" name="description" value="<%= @product.description() %>">
+</div>
+<div class="col_right">
+  <input id="description" type="text" name="description" value="<%= @product.description() %>" class="long_text">
+</div>
+</div>
   <br>
 
+  <div class="row">
+    <div class="col_left">
   <label for="stock">Stock: </label>
+</div>
+<div class="col_right">
   <input id="stock" type="number" min="0" name="stock" value="<%= @product.stock() %>">
+</div>
+</div>
   <br>
 
+  <div class="row">
+    <div class="col_left">
   <label for="buying-cost">Buying Cost: £</label>
+</div>
+<div class="col_right">
   <input id="buying-cost" type="number" min="0" step="0.01" name="buying_cost" value="<%= @product.buying_cost() %>">
+</div>
+</div>
   <br>
 
+  <div class="row">
+    <div class="col_left">
   <label for="selling-price">Selling Price: £</label>
+</div>
+<div class="col_right">
   <input id="selling-price" type="number" min="0" step=0.01 name="selling_price" value="<%= @product.selling_price() %>">
+</div>
+</div>
   <br>
 
+  <div class="row">
+    <div class="col_left">
   <label for="manufacturer-select">Select A Manufacturer: </label>
+</div>
+<div class="col_right">
   <select id="manufacturer-select" name="manufacturer_id">
     <option selected value="<%= @product.manufacturer_id %>"> <%= @product.manufacturer().manufacturer_name() %></option>
     <% @manufacturers.each do |manufacturer| %>
@@ -31,8 +66,11 @@
     <% end %>
     <%end%>
   </select>
+</div>
+</div>
   <br>
 
   <input type="submit" value="Update">
 
 </form>
+</div>
