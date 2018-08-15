@@ -38,9 +38,32 @@ manufacturer3 = Manufacturer.new(
   }
 )
 
+manufacturer4 = Manufacturer.new(
+  {
+    'manufacturer_name' => "Fantasy Flight Games",
+    'website' => "https://www.fantasyflightgames.com/en/index/",
+    'contact_name' => "F. Flighty",
+    'email' => "f.flighty@fantasyflightgames.com",
+    'phone_number' => "0800 000 000",
+    'notes' => "One of the biggest game producers, we need to try and get hold of X-Wing"
+  }
+)
+
+manufacturer5 = Manufacturer.new(
+  {
+    'manufacturer_name' => "Chessex",
+    'website' => "http://www.chessex.com/",
+    'contact_name' => "C.Dicey",
+    'email' => "c.dicey@chessex.com",
+    'phone_number' => "0800 000 000",
+    'notes' => "Largest dice manufacturer in the UK"
+  }
+)
+
 manufacturer1.save()
 manufacturer2.save()
 manufacturer3.save()
+manufacturer4.save()
 
 product1 = Product.new(
   {
@@ -75,9 +98,33 @@ product3 = Product.new(
   }
 )
 
+product4 = Product.new (
+  {
+    'product_name' => "Tokaido",
+    'description' => "With new artwork from Naade, new graphics design for the cards, new panorama pictures for travelers to combine, and a fresh new graphical look, the Tokaido 5th Anniversary Edition will be both a new product that stands on its own while also continuing the tradition of elegance and beauty that everyone expects from this beloved brand!In Tokaido, each player is a traveler crossing the 'East sea road', one of the most magnificent roads of Japan",
+    'stock' => 10,
+    'buying_cost' => 30.00,
+    'selling_price' => 34.99,
+    'manufacturer_id' => manufacturer3.id()
+  }
+)
+
+product5 = Product.new(
+  {
+    'product_name' => "Dungeons & Dragons Dungeon Masters Guide",
+    'description' => "Master's guide for the roleplay game D&D Dungeons and Dragons.",
+    'stock' => 8,
+    'buying_cost' => 20.00,
+    'selling_price' => 27.99,
+    'manufacturer_id' => manufacturer1.id()
+  }
+)
+
 product1.save()
 product2.save()
 product3.save()
+product4.save()
+product5.save()
 
 
 # binding.pry
