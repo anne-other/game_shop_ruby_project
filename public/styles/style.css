@@ -29,16 +29,24 @@ body {
   background: white url(/images/background.jpg);
   background-size: 50%;
   background-repeat: no-repeat;
-  background-position: 100% 125px;
+  background-position: 100% 155px;
   font-family: "Alegreya", serif;
+  font-size: 20px;
 }
 
 form, select {
   font-family: "Alegreya", serif;
+  font-size: 14pt;
+  padding-left: 5px;
 }
 
-input, option{
-  font-family: inherit;
+input[type=submit]{
+  background-color: rgb(23,85,117);
+  font-family: "Alegreya", serif;
+  color: white;
+  border-color: rgb(61,183,244);
+  border-radius: 6px;
+  font-size: 12pt;
 }
 
 h1 {
@@ -46,6 +54,7 @@ h1 {
   color: white;
   padding-left: 20px;
   padding-top: 1px;
+
 }
 
 h2, h3, th {
@@ -63,8 +72,8 @@ nav a {
 }
 
 table {
-  background-color: rgb(255,255,255,0.5)
-
+  background-color: rgb(255,255,255,0.5);
+  padding-top: 10px;
 }
 
 td {
