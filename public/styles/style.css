@@ -41,12 +41,14 @@ form, select {
 }
 
 input[type=submit]{
-  background-color: rgb(23,85,117);
+  background-color: rgb(61,183,244);
   font-family: "Alegreya", serif;
   color: white;
-  border-color: rgb(61,183,244);
+  border-color: rgb(147,219,255);
   border-radius: 6px;
   font-size: 12pt;
+  width: 10em;
+  height: 2.5em;
 }
 
 h1 {
@@ -73,7 +75,7 @@ nav a {
 
 table {
   background-color: rgb(255,255,255,0.5);
-  padding-top: 10px;
+  padding-top: 30px;
 }
 
 td {
@@ -86,6 +88,10 @@ th {
   border-bottom: 1px solid rgb(91,18,25);
 }
 
+dd {
+  width: 30%;
+  padding-left: 100px;
+}
 
 a {
   color: rgb(61,183,244);
@@ -104,6 +110,16 @@ a:visited {
 
 div.header {
   background-color: rgb(168,50,61,0.8);
+}
+
+div.show_button {
+  display: flex;
+  flex: space-around;
+}
+
+input.delete {
+  background-color: rgb(168,50,61);
+  border-color: rgb(91,18,25);
 }
 
 .in_stock {
