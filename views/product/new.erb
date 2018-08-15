@@ -4,18 +4,23 @@
 
   <label for="product-name">Name: </label>
   <input id="product-name" type="text" name="product_name">
+  <br>
 
   <label for="description">Description: </label>
   <input id="description" type="text" name="description">
+  <br>
 
   <label for="stock">Stock: </label>
   <input id="stock" type="number" min="0" name="stock">
+  <br>
 
   <label for="buying-cost">Buying Cost: £</label>
   <input id="buying-cost" type="number" min="0" step="0.01" name="buying_cost">
+  <br>
 
   <label for="selling-price">Selling Price: £</label>
   <input id="selling-price" type="number" min="0" step=0.01 name="selling_price">
+  <br>
 
   <label for="manufacturer-select">Select A Manufacturer: </label>
   <select id="manufacturer-select" name="manufacturer_id">
@@ -23,6 +28,7 @@
     <option value="<%= manufacturer.id %>"> <%= manufacturer.manufacturer_name() %></option>
     <%end%>
   </select>
+  <br>
 
   <input type="submit" value="Add">
 
