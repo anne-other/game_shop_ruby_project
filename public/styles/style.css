@@ -29,7 +29,7 @@ body {
   background: white url(/images/background.jpg);
   background-size: 50%;
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: 100% 125px;
   font-family: "Alegreya", serif;
 }
 
@@ -43,19 +43,51 @@ input, option{
 
 h1 {
   font-family: "Fugaz One", cursive;
+  color: white;
+  padding-left: 20px;
+  padding-top: 1px;
 }
 
 h2, h3, th {
   font-family: "Signika", sans-serif;
 }
 
-div.header {
-  background-color: rgb(168,50,61,0.8);
+nav {
+  padding: 5px;
+}
+
+nav a {
   color: white;
+  text-decoration: none;
+  padding-left: 20px;
 }
 
 table {
   background-color: rgb(255,255,255,0.5)
+}
+
+td {
+  padding: 5px;
+  padding-right: 10px;
+}
+
+a {
+  color: rgb(61,183,244);
+}
+nav a:hover {
+  color: rgb(147,219,255);
+}
+
+nav a:visited {
+  color: rgb(210,240,255);
+}
+
+a:visited {
+  color: rgb(23,85,117);
+}
+
+div.header {
+  background-color: rgb(168,50,61,0.8);
 }
 
 .in_stock {
