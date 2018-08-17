@@ -64,6 +64,7 @@ manufacturer1.save()
 manufacturer2.save()
 manufacturer3.save()
 manufacturer4.save()
+manufacturer5.save()
 
 product1 = Product.new(
   {
